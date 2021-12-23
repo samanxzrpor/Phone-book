@@ -64,7 +64,8 @@ class MysqlBaseModel extends BaseModelAbstract
 
     public function delete(array $where): int
     {
-        return 1;
+        $data = $this->connection->delete($this->tableName , $where);
+        return $data->rowCount();
     }
 
     public function getCount($where = '*')

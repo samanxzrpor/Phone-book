@@ -73,7 +73,7 @@
                     <td><?= $contact['name'] ?></td>
                     <td><?= $contact['number'] ?></td>
                     <td><?= $contact['email'] ?></td>
-                    <td></td>
+                    <td><a href="<?= $_ENV['BASEURL'] . 'Contacts/delete/'.$contact['ID'].''?>"><img src="<?= $_ENV['BASEURL'] . 'assets/images/delete-icon.svg' ?>" style="width:30px;" alt=""></a></td>
                     <td></td>
                 </tr>
                 <?php endforeach; ?>

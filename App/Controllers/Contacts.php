@@ -47,5 +47,16 @@ class Contacts
 
     }
 
+    public function delete(array $getParams = null)
+    {
+        if (!isset($getParams))
+            return ;
+
+        $res = $this->contactModel->delete(['ID'=>$getParams['ID']]);
+        $data['deletedCount'] = $res;
+        
+        loadView('deletePage', $data);
+    }
+
 
 }
